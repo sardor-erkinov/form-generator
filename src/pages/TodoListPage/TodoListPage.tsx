@@ -59,6 +59,13 @@ const columns: IColumn[] = [
     sortable: false,
     width: () => 100,
   },
+  {
+    type: ColumnType.Text,
+    headerName: "First Name",
+    sortable: false,
+    field: "firstName",
+    width: () => 100,
+  },
 ];
 
 const actions: IListAction[] = [
@@ -97,7 +104,7 @@ export const TodoListPage = () => {
   const { setLoader } = useLoader();
 
   const handler = useArrayPaginator(
-    async () => await fetchApi("/api/v1/todos"),
+    async () => await fetchApi("/users"),
     {
       onLoadStart: () => setLoader(true),
       onLoadEnd: () => setLoader(false),

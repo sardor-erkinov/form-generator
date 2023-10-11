@@ -30,7 +30,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "msw-init": "npx msw init public/ --save"
+    "msw-init": "npx msw init public/ --save",
+    "start:server": "json-server --watch db.json --port 8080"
   },
   "eslintConfig": {
     "extends": [
@@ -64,5 +65,6 @@
   },
   "msw": {
     "workerDirectory": "public"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
